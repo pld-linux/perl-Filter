@@ -3,7 +3,7 @@ Summary:	Source filters
 Summary(pl):	Filtry ¼róde³ 
 Name:		perl-Filter
 Version:	1.30
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -43,6 +43,7 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+find examples -name '*.bak' -exec rm -f '{}' ';'
 cp -r examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %clean
