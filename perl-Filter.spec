@@ -7,8 +7,8 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Filter/Filter-%{version}.tar.gz
-Patch:		perl-Filter-paths.patch
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Filter/Filter-%{version}.tar.gz
+Patch0:		perl-Filter-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
@@ -31,10 +31,10 @@ make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 make install DESTDIR=$RPM_BUILD_ROOT
 
-cp -r examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
+cp -r examples/* $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 find $RPM_BUILD_ROOT%{perl_sitearch}/auto/Filter -name \*.so \
 	-exec strip --strip-unneeded {} \;
@@ -80,4 +80,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man3/*
 
-/usr/src/examples/%{name}
+%{_prefix}/src/examples/%{name}
