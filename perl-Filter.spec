@@ -2,13 +2,13 @@
 Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
-Version:	1.17
+Version:	1.19
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Filter/Filter-%{version}.tar.gz
-Patch0:		perl-Filter-paths.patch
+Patch0:		%{name}-paths.patch
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 %requires_eq	perl
@@ -42,7 +42,7 @@ find $RPM_BUILD_ROOT%{perl_sitearch}/auto/Filter -name \*.so \
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/Filter
   sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv .packlist.new .packlist
+  mv -f .packlist.new .packlist
 )
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
