@@ -2,12 +2,12 @@
 Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
-Version:	1.29
-Release:	2.2
+Version:	1.30
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
-# Source0-md5:	a0f17f25dbd4b44424c8798db0a6720e
+# Source0-md5:	01fcae66fd088c01d829200d6fdb1dac
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -26,14 +26,16 @@ Pakiet Filter zawiera zestaw filtrów ¼róde³.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make} OPTIMIZE="%{rpmcflags}"
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 rm -f decrypt/*.bak examples/*.orig
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 cp -r examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
