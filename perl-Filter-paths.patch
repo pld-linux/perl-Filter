@@ -1,0 +1,8 @@
+--- examples/filtdef	Wed Nov 15 22:41:08 1995
++++ examples.paths/filtdef	Fri Nov  5 22:50:29 1999
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/perl
++#!/usr/bin/perl
+ 
+ use Compress::Zlib ;
+ 
