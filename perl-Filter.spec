@@ -32,11 +32,11 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_exampledir}/%{name}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-cp -r examples/* $RPM_BUILD_ROOT%{_exampledir}/%{name}
+cp -r examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 gzip -9nf Changes README
 
@@ -63,4 +63,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/auto/Filter/tee/tee.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Filter/tee/tee.so
 %{_mandir}/man3/*
-%{_exampledir}/%{name}
+%{_examplesdir}/%{name}
