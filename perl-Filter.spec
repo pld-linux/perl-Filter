@@ -25,7 +25,7 @@ Pakiet Filter zawiera zestaw filtrów ¼róde³.
 
 %build
 %{__perl} Makefile.PL \
-	INSTALLDIRS=vendor 
+	INSTALLDIRS=vendor
 %{__make} OPTIMIZE="%{rpmcflags}"
 rm -f decrypt/*.bak examples/*.orig
 
