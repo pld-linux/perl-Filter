@@ -3,7 +3,7 @@ Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
 Version:	1.29
-Release:	2.1
+Release:	2.2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
@@ -26,7 +26,7 @@ Pakiet Filter zawiera zestaw filtrów ¼róde³.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
-rm decrypt/*.bak examples/*.orig
+rm -f decrypt/*.bak examples/*.orig
 
 %install
 rm -rf $RPM_BUILD_ROOT
