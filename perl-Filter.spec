@@ -2,8 +2,8 @@
 Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
-Version:	1.28
-Release:	2
+Version:	1.29
+Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Filter/Filter-%{version}.tar.gz
