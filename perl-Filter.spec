@@ -1,10 +1,11 @@
 %include	/usr/lib/rpm/macros.perl
-Summary:	Filter perl module
-Summary(pl):	Modu³ perla Filter
+Summary:	Source filters
+Summary(pl):	Filtry ¼róde³ 
 Name:		perl-Filter
 Version:	1.30
 Release:	1
-License:	GPL
+# same as perl
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
 # Source0-md5:	01fcae66fd088c01d829200d6fdb1dac
@@ -14,10 +15,15 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Filter package consists of a number of Source Filters.
+Filter package consists of a number of source filters.  Source filters
+alter the program text of a module before Perl sees it, much as a C
+preprocessor alters the source text of a C program before the compiler
+sees it.
 
 %description -l pl
-Pakiet Filter zawiera zestaw filtrów ¼róde³.
+Pakiet Filter zawiera zestaw filtrów ¼róde³. Filtry ¼róde³ ingeruj± w
+tekst kodu modu³u zanim zobaczy go Perl, podobnie jak robi to
+proprocesor C zanim kompilator ujrzy kod.
 
 %prep
 %setup -q -n Filter-%{version}
