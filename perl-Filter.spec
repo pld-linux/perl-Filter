@@ -28,7 +28,7 @@ Pakiet Filter zawiera zestaw filtrów ¼róde³.
 
 %build
 perl Makefile.PL
-%{__make} OPTIMIZE="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
+%{__make} OPTIMIZE="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
