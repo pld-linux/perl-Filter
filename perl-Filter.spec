@@ -2,7 +2,7 @@
 Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
-Version:	1.23
+Version:	1.25
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
