@@ -23,7 +23,7 @@ Pakiet Filter zawiera zestaw filtrów ¼róde³.
 %patch -p0
 
 %build
-perl Makefile.PL
+%{__perl} Makefile.PL
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
