@@ -8,8 +8,8 @@ License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Filter/Filter-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
-BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,18 +34,17 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 cp -r examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %dir %{perl_sitearch}/Filter
 %{perl_sitearch}/Filter/Util
 %{perl_sitearch}/Filter/*.pm
 %dir %{perl_sitearch}/auto/Filter
+%dir %{perl_sitearch}/auto/Filter/Util
 %dir %{perl_sitearch}/auto/Filter/Util/Call
 %{perl_sitearch}/auto/Filter/Util/Call/Call.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Filter/Util/Call/Call.so
@@ -57,8 +56,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{perl_sitearch}/auto/Filter/decrypt/decrypt.so
 %dir %{perl_sitearch}/auto/Filter/tee
 %{perl_sitearch}/auto/Filter/tee/tee.bs
+%attr(755,root,root) %{perl_sitearch}/auto/Filter/tee/tee.so
 %{perl_sitearch}/filter-util.pl
 %{perl_sitearch}/perlfilter.pod
-%attr(755,root,root) %{perl_sitearch}/auto/Filter/tee/tee.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}
