@@ -2,9 +2,9 @@
 Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
-Version:	1.16
-Release:	3
-Copyright:	GPL
+Version:	1.17
+Release:	1
+License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Filter/Filter-%{version}.tar.gz
@@ -31,10 +31,10 @@ make OPTIMIZE="$RPM_OPT_FLAGS"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
+install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
 make install DESTDIR=$RPM_BUILD_ROOT
 
-cp -r examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
+cp -r examples/* $RPM_BUILD_ROOT/usr/src/examples/%{name}
 
 find $RPM_BUILD_ROOT%{perl_sitearch}/auto/Filter -name \*.so \
 	-exec strip --strip-unneeded {} \;
@@ -80,4 +80,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man3/*
 
-/usr/src/examples/%{name}-%{version}
+/usr/src/examples/%{name}
