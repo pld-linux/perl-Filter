@@ -3,13 +3,13 @@ Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
 Version:	1.29
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl >= 5.6
-BuildRequires:	rpm-perlprov >= 3.0.3-16
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -23,7 +23,8 @@ Pakiet Filter zawiera zestaw filtrów ¼róde³.
 %patch -p0
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor 
 %{__make} OPTIMIZE="%{rpmcflags}"
 
 %install
@@ -40,23 +41,23 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%dir %{perl_sitearch}/Filter
-%{perl_sitearch}/Filter/Util
-%{perl_sitearch}/Filter/*.pm
-%dir %{perl_sitearch}/auto/Filter
-%dir %{perl_sitearch}/auto/Filter/Util
-%dir %{perl_sitearch}/auto/Filter/Util/Call
-%{perl_sitearch}/auto/Filter/Util/Call/Call.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Filter/Util/Call/Call.so
-%dir %{perl_sitearch}/auto/Filter/Util/Exec
-%{perl_sitearch}/auto/Filter/Util/Exec/Exec.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Filter/Util/Exec/Exec.so
-%dir %{perl_sitearch}/auto/Filter/decrypt
-%{perl_sitearch}/auto/Filter/decrypt/decrypt.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Filter/decrypt/decrypt.so
-%dir %{perl_sitearch}/auto/Filter/tee
-%{perl_sitearch}/auto/Filter/tee/tee.bs
-%attr(755,root,root) %{perl_sitearch}/auto/Filter/tee/tee.so
-%{perl_sitearch}/filter-util.pl
+%dir %{perl_vendorarch}/Filter
+%{perl_vendorarch}/Filter/Util
+%{perl_vendorarch}/Filter/*.pm
+%dir %{perl_vendorarch}/auto/Filter
+%dir %{perl_vendorarch}/auto/Filter/Util
+%dir %{perl_vendorarch}/auto/Filter/Util/Call
+%{perl_vendorarch}/auto/Filter/Util/Call/Call.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Filter/Util/Call/Call.so
+%dir %{perl_vendorarch}/auto/Filter/Util/Exec
+%{perl_vendorarch}/auto/Filter/Util/Exec/Exec.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Filter/Util/Exec/Exec.so
+%dir %{perl_vendorarch}/auto/Filter/decrypt
+%{perl_vendorarch}/auto/Filter/decrypt/decrypt.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Filter/decrypt/decrypt.so
+%dir %{perl_vendorarch}/auto/Filter/tee
+%{perl_vendorarch}/auto/Filter/tee/tee.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Filter/tee/tee.so
+%{perl_vendorarch}/filter-util.pl
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}
