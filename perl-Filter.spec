@@ -2,7 +2,7 @@
 Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
-Version:	1.26
+Version:	1.28
 Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
@@ -57,6 +57,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{perl_sitearch}/auto/Filter/decrypt/decrypt.so
 %dir %{perl_sitearch}/auto/Filter/tee
 %{perl_sitearch}/auto/Filter/tee/tee.bs
+%{perl_sitearch}/filter-util.pl
+%{perl_sitearch}/perlfilter.pod
 %attr(755,root,root) %{perl_sitearch}/auto/Filter/tee/tee.so
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}
