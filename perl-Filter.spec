@@ -3,7 +3,7 @@ Summary:	Filter perl module
 Summary(pl):	Modu³ perla Filter
 Name:		perl-Filter
 Version:	1.28
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/Filter/Filter-%{version}.tar.gz
@@ -58,6 +58,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_sitearch}/auto/Filter/tee/tee.bs
 %attr(755,root,root) %{perl_sitearch}/auto/Filter/tee/tee.so
 %{perl_sitearch}/filter-util.pl
-%{perl_sitearch}/perlfilter.pod
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}
