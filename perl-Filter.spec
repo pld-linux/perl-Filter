@@ -27,7 +27,7 @@ proprocesor C zanim kompilator ujrzy kod.
 
 %prep
 %setup -q -n Filter-%{version}
-%patch -p0
+%patch0 -p0
 
 %build
 %{__perl} Makefile.PL \
