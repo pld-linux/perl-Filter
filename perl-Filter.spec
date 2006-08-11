@@ -2,13 +2,13 @@
 Summary:	Source filters
 Summary(pl):	Filtry ¼róde³ 
 Name:		perl-Filter
-Version:	1.30
-Release:	2
+Version:	1.32
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
-# Source0-md5:	01fcae66fd088c01d829200d6fdb1dac
+# Source0-md5:	e9205f4db3784dd3247bdd6ff0bee2d5
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
