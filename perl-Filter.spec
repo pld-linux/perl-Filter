@@ -3,7 +3,7 @@ Summary:	Source filters
 Summary(pl):	Filtry ¼róde³ 
 Name:		perl-Filter
 Version:	1.32
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
