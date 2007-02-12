@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Source filters
-Summary(pl):	Filtry ºrÛde≥ 
+Summary(pl.UTF-8):   Filtry ≈∫r√≥de≈Ç 
 Name:		perl-Filter
 Version:	1.32
 Release:	1
@@ -20,9 +20,9 @@ alter the program text of a module before Perl sees it, much as a C
 preprocessor alters the source text of a C program before the compiler
 sees it.
 
-%description -l pl
-Pakiet Filter zawiera zestaw filtrÛw ºrÛde≥. Filtry ºrÛde≥ ingeruj± w
-tekst kodu modu≥u zanim zobaczy go Perl, podobnie jak robi to
+%description -l pl.UTF-8
+Pakiet Filter zawiera zestaw filtr√≥w ≈∫r√≥de≈Ç. Filtry ≈∫r√≥de≈Ç ingerujƒÖ w
+tekst kodu modu≈Çu zanim zobaczy go Perl, podobnie jak robi to
 proprocesor C zanim kompilator ujrzy kod.
 
 %prep
