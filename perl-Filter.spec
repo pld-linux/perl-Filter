@@ -2,13 +2,13 @@
 Summary:	Source filters
 Summary(pl.UTF-8):	Filtry źródeł 
 Name:		perl-Filter
-Version:	1.32
+Version:	1.34
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
-# Source0-md5:	e9205f4db3784dd3247bdd6ff0bee2d5
+# Source0-md5:	49606303d20b90f07d697220272bf59a
 Patch0:		%{name}-paths.patch
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
