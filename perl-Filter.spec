@@ -10,6 +10,7 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
 # Source0-md5:	49606303d20b90f07d697220272bf59a
 Patch0:		%{name}-paths.patch
+URL:		http://search.cpan.org/dist/Filter/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -23,7 +24,7 @@ sees it.
 %description -l pl.UTF-8
 Pakiet Filter zawiera zestaw filtrów źródeł. Filtry źródeł ingerują w
 tekst kodu modułu zanim zobaczy go Perl, podobnie jak robi to
-proprocesor C zanim kompilator ujrzy kod.
+preprocesor C zanim kompilator ujrzy kod.
 
 %prep
 %setup -q -n Filter-%{version}
