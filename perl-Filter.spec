@@ -34,6 +34,7 @@ preprocesor C zanim kompilator ujrzy kod.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 %{__make} \
+	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
 rm -f decrypt/*.bak examples/*.orig
 
