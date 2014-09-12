@@ -60,16 +60,12 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Filter
 %dir %{perl_vendorarch}/auto/Filter/Util
 %dir %{perl_vendorarch}/auto/Filter/Util/Call
-%{perl_vendorarch}/auto/Filter/Util/Call/Call.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Filter/Util/Call/Call.so
 %dir %{perl_vendorarch}/auto/Filter/Util/Exec
-%{perl_vendorarch}/auto/Filter/Util/Exec/Exec.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Filter/Util/Exec/Exec.so
 %dir %{perl_vendorarch}/auto/Filter/decrypt
-%{perl_vendorarch}/auto/Filter/decrypt/decrypt.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Filter/decrypt/decrypt.so
 %dir %{perl_vendorarch}/auto/Filter/tee
-%{perl_vendorarch}/auto/Filter/tee/tee.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Filter/tee/tee.so
 %{_mandir}/man3/Filter*.3pm*
 %{_examplesdir}/%{name}-%{version}
