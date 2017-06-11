@@ -3,7 +3,7 @@ Summary:	Source filters
 Summary(pl.UTF-8):	Filtry źródeł 
 Name:		perl-Filter
 Version:	1.49
-Release:	6
+Release:	7
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
