@@ -2,14 +2,13 @@
 Summary:	Source filters
 Summary(pl.UTF-8):	Filtry źródeł 
 Name:		perl-Filter
-Version:	1.49
-Release:	8
+Version:	1.59
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
-# Source0-md5:	729118a8493de8a91b95547ce502982a
-Patch0:		%{name}-paths.patch
+# Source0-md5:	54e08a158bff1f35e0a93b3993dcf52f
 URL:		http://search.cpan.org/dist/Filter/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -28,7 +27,6 @@ preprocesor C zanim kompilator ujrzy kod.
 
 %prep
 %setup -q -n Filter-%{version}
-%patch0 -p0
 
 %build
 %{__perl} Makefile.PL \
