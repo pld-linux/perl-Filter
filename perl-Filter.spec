@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	Source filters
 Summary(pl.UTF-8):	Filtry źródeł 
 Name:		perl-Filter
