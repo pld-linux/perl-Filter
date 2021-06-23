@@ -1,16 +1,17 @@
 Summary:	Source filters
 Summary(pl.UTF-8):	Filtry źródeł 
 Name:		perl-Filter
-Version:	1.59
-Release:	4
+Version:	1.60
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
-# Source0-md5:	54e08a158bff1f35e0a93b3993dcf52f
-URL:		http://search.cpan.org/dist/Filter/
+# Source0-md5:	2c23bef617f75b5ca48970e7ff856ab6
+URL:		https://metacpan.org/dist/Filter
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -33,7 +34,6 @@ preprocesor C zanim kompilator ujrzy kod.
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
-rm -f decrypt/*.bak examples/*.orig
 
 %install
 rm -rf $RPM_BUILD_ROOT
