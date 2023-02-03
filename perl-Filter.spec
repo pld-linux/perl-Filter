@@ -1,14 +1,21 @@
+#
+# Conditional build:
+%bcond_without	tests	# unit tests
+
 Summary:	Source filters
 Summary(pl.UTF-8):	Filtry źródeł 
 Name:		perl-Filter
-Version:	1.60
-Release:	3
+Version:	1.64
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
-# Source0-md5:	2c23bef617f75b5ca48970e7ff856ab6
+Source0:	https://www.cpan.org/modules/by-module/Filter/Filter-%{version}.tar.gz
+# Source0-md5:	b524e63f44e8a7724d31ef91eb5a7d53
 URL:		https://metacpan.org/dist/Filter
+%if %{with tests}
+BuildRequires:	perl-Test-Simple >= 0.88
+%endif
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	rpmbuild(macros) >= 1.745
@@ -34,6 +41,8 @@ preprocesor C zanim kompilator ujrzy kod.
 %{__make} \
 	CC="%{__cc}" \
 	OPTIMIZE="%{rpmcflags}"
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
